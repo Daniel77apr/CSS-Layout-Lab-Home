@@ -237,16 +237,24 @@ a.home {
 
 .container1 .item {
     height: 50%;
-    margin: calc(var(--margin) / 2);
+    margin: calc(var(--margin) / 4);
 }
 
-.container1 .item:nth-of-type(1), .container1 .item:nth-of-type(3), .container9 .item:nth-of-type(1), .container9 .item:nth-of-type(3) {
+
+
+.container1 .item {
     flex-grow: 1;
+    transition: flex-grow 1s;
 }
 
 .container1 .item:nth-of-type(2) {
     flex-grow: 2;
 }
+
+.container1:hover .item:nth-of-type(1) {
+    flex-grow: 3;
+}
+
 
 /* GRID */
 
@@ -259,11 +267,22 @@ a.home {
     padding: var(--margin);
     gap: calc(var(--margin) / 2);
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 2fr 4fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas: 
     "a a"
     "b c "
     "d d";
+    transition-property: grid-template-columns, grid-template-rows;
+    transition-duration: 1s;
+}
+
+.container2:hover {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr 3fr;
+    grid-template-areas: 
+    "b a"
+    "b c "
+    "d c";
 }
 
 .container2 div:nth-of-type(1) {
