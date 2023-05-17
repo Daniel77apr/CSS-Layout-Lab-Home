@@ -157,7 +157,7 @@ a {
 }
 
 .logomark {
-    height: 30px;
+    height: 2rem;
 }
 
 a:hover:not(section a) {
@@ -304,5 +304,17 @@ a.home {
 @media (max-width: 600px) {
     .container1, .container2 {
         height: calc(var(--section-width) * 0.3);
+    }
+}
+
+@media (max-width: 450px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    :root {
+        font-size: 10px;
     }
 }
