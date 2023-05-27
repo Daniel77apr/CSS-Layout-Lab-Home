@@ -73,7 +73,7 @@ h1 {
 h2 {
     text-align: center;
     color: var(--alice-blue);
-    
+    margin-bottom: var(--margin);
 }
 
 .container, .code-div {
